@@ -34,7 +34,7 @@ def getROIName(npyDir, widthdiv = 2, heightdiv = 2):
             roi_name.append([i, neededROI])
     return roi_name, files, dir, maskList
 
-def findVertex(masks, j, i, k = 5):  
+def findVertex(masks, j, i, k = 3):  
     surr =[masks.item((j+k, i-k)),
     masks.item((j+k, i)),
     masks.item((j+k, i+k)),
