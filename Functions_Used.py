@@ -14,8 +14,9 @@ def specificOutline(imgarr, roi): # takes in an imagearr and the roi
     specific = np.where(imgarr == roi, imgarr, empty)
     return specific
 
-def getROIName(npyDir, widthdiv = 2, heightdiv = 2): 
-    basedir = os.path.join(Path.cwd(), npyDir)
+def getROIName(npyDir, basedir = 1, widthdiv = 2, heightdiv = 2): 
+    if basedir == 1: 
+        basedir = os.path.join(Path.cwd(), npyDir)
     files = io.get_image_files(basedir, "")
     dir = []
     maskList = []
